@@ -57,7 +57,7 @@ def handle_message(event):
                 message = TextSendMessage(text = "凶")
     if get == "請問今年脫單機率":
         result = random.randint(0,100)
-        message = TextSendMessage(text = str(result) + "%")
+        #message = TextSendMessage(text = str(result) + "%")
     if get == "0":
         message = TextSendMessage(text = "0%")
     
