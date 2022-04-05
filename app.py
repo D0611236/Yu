@@ -47,17 +47,17 @@ def handle_message(event):
 
     if get == "求籤":
         result = random.randint(0,3)
-            if result == 0:
-                message = TextSendMessage(text = "大吉")
-            elif result == 1:
-                message = TextSendMessage(text = "吉")
-            elif result == 2:
-                message = TextSendMessage(text = "中")
-            else:
-                message = TextSendMessage(text = "凶")
+        if result == 0:
+            message = TextSendMessage(text = "大吉")
+        elif result == 1:
+            message = TextSendMessage(text = "吉")
+        elif result == 2:
+            message = TextSendMessage(text = "中")
+        else:
+            message = TextSendMessage(text = "凶")
     if get == "請問今年脫單機率":
         result = random.randint(0,100)
-        #message = TextSendMessage(text = str(result) + "%")
+        message = TextSendMessage(text = str(result) + "%")
     if get == "0":
         message = TextSendMessage(text = "0%")
     
