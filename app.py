@@ -60,6 +60,12 @@ def handle_message(event):
         message = TextSendMessage(text = str(result) + "%")
     if get == "0":
         message = TextSendMessage(text = "0%")
+        
+    if('黑人問號' in get):
+        message = ImageSendMessage(
+            original_content_url = 'https://i.imgur.com/zTOnfAi.jpg',
+            preview_image_url = 'https://i.imgur.com/zTOnfAi.jpg'
+        )
     
     if get == "hello 你好嗎":    
         message = TextSendMessage(text = "衷心感謝")
